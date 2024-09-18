@@ -4,15 +4,24 @@
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/metro-runtime": "~3.2.3",
     "expo": "~51.0.28",
     "expo-status-bar": "~1.12.1",
+    "mapbox-gl": "^3.6.0",
+    "maplibre-gl": "^4.7.0",
+    "pmtiles": "^3.0.7",
     "react": "18.2.0",
-    "react-native": "0.74.5"
+    "react-dom": "18.2.0",
+    "react-map-gl": "^7.1.7",
+    "react-native": "0.74.5",
+    "react-native-web": "~0.19.10",
+    "react-native-webview": "13.8.6",
+    "text-encoding-polyfill": "^0.6.7"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
