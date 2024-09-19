@@ -1,11 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Map from './Map.jsx';
+import DOMComponent from './my-component.jsx';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Map />
+      <Text>OUTSIDE MAP!</Text>
+      <DOMComponent dom={{ autoSize: true }} />
       <StatusBar style="auto" />
     </View>
   );

@@ -7,7 +7,7 @@ import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { Protocol } from 'pmtiles';
 
-export default function MapBox() {
+export default function MapBox(_) {
   useEffect(() => {
     let protocol = new Protocol();
     maplibregl.addProtocol('pmtiles', protocol.tile);
@@ -17,29 +17,31 @@ export default function MapBox() {
   }, []);
 
   return (
-    <Map
-      style={{ width: 600, height: 400 }}
-      mapStyle={{
-        version: 8,
-        sources: {
-          sample: {
-            type: 'vector',
-            url: 'pmtiles://https://r2-public.protomaps.com/protomaps-sample-datasets/cb_2018_us_zcta510_500k.pmtiles',
-          },
-        },
-        layers: [
-          {
-            id: 'zcta',
-            source: 'sample',
-            'source-layer': 'zcta',
-            type: 'line',
-            paint: {
-              'line-color': '#999',
+    <div style={{ border: '1px solid red', width: 201, height: 301 }}>
+      <Map
+        style={{ width: 200, height: 300 }}
+        mapStyle={{
+          version: 8,
+          sources: {
+            sample: {
+              type: 'vector',
+              url: 'pmtiles://https://r2-public.protomaps.com/protomaps-sample-datasets/cb_2018_us_zcta510_500k.pmtiles',
             },
           },
-        ],
-      }}
-      mapLib={maplibregl}
-    />
+          layers: [
+            {
+              id: 'zcta',
+              source: 'sample',
+              'source-layer': 'zcta',
+              type: 'line',
+              paint: {
+                'line-color': '#999',
+              },
+            },
+          ],
+        }}
+        mapLib={maplibregl}
+      />
+    </div>
   );
 }
