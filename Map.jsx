@@ -17,9 +17,9 @@ export default function MapBox(_) {
   }, []);
 
   return (
-    <div style={{ border: '1px solid red', width: 201, height: 301 }}>
+    <div style={{ width: '100%', height: '100%' }}>
       <Map
-        style={{ width: 200, height: 300 }}
+        style={{ width: '100%', height: 900 }}
         mapStyle={{
           version: 8,
           sources: {
