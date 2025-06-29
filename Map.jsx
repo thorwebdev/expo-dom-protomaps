@@ -2,7 +2,7 @@
 
 import 'text-encoding-polyfill';
 import { useEffect } from 'react';
-import Map from 'react-map-gl';
+import Map from 'react-map-gl/maplibre';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { Protocol } from 'pmtiles';
